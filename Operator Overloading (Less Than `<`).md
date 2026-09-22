@@ -1,31 +1,38 @@
-# 🐍 Python OOP: Operator Overloading (Less Than `<`)
+# 🐟 Method Overriding-Fish and Shark Class Inheritance in Python
 
-## 🎯 AIM
+## 🧠 AIM:
+To write a Python program that demonstrates class inheritance by creating a parent class `Fish` with a method `type`, and a child class `Shark` that overrides the `type` method.
 
-To write a Python program that demonstrates **operator overloading** by overloading the **less than (`<`)** operator using a custom class.
+## 📋 ALGORITHM:
 
----
+1. Define the `Fish` class with a method named `type()` that prints `"fish"`.
+2. Define the `Shark` class as a subclass of `Fish`, and override the `type()` method to print `"shark"`.
+3. Create an instance of the `Fish` class named `obj_goldfish`.
+4. Create an instance of the `Shark` class named `obj_hammerhead`.
+5. Use a `for` loop to iterate over both objects.
+6. Within the loop, call the `type()` method using the loop variable.
+7. Output will demonstrate method overriding: printing `"fish"` and `"shark"` accordingly.
 
-## 🧠 ALGORITHM
+## 💻 PROGRAM:
+```
+class Fish:
+    def type(self):
+        print("fish")
 
-1. **Create Class `A`**:
-   - Define the `__init__()` method to initialize the object with a value `a`.
+class Shark(Fish):
+    def type(self):
+        print("shark")
 
-2. **Overload the `<` Operator**:
-   - Define the `__lt__()` method with logic:
-     - If `self.a < o.a`, return `"ob1 is less than ob2"`
-     - Else, return `"ob2 is less than ob1"`
+obj_goldfish = Fish()
+obj_hammerhead = Shark()
 
-3. **Create Objects**:
-   - Instantiate two objects `ob1` and `ob2` with values.
+for obj in (obj_goldfish, obj_hammerhead):
+    obj.type()
+```
 
-4. **Use `<` Operator**:
-   - Use `print(ob1 < ob2)` to trigger the overloaded behavior.
+## OUTPUT
 
----
+<img width="847" height="98" alt="image" src="https://github.com/user-attachments/assets/c84ec0b6-6319-473d-8494-a0bf814eaf19" />
 
-## 💻 Program
-
-## Output
-
-## Result
+## RESULT
+Thus, the program is executed and output verified successfully
